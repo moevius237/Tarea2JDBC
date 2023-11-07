@@ -159,7 +159,7 @@ public class Main {
                                                     new Personajes(perso, raza, edad, dao, etapa), antiguo);
                                             System.out.println("Se ha actualizado correctamente " + antiguo);
                                         }else{
-                                            System.out.println("Ese personake no existe");
+                                            System.out.println("Ese personaje no existe");
                                         }
                                         break;
                                     case 2:
@@ -196,7 +196,7 @@ public class Main {
                         break;
 
                     case 4:
-                        System.out.println("Elige una tabla para borrar " + PersonajesAccesDB.MostrarNombres());
+                        System.out.println("Elige un personaje para borrar " + PersonajesAccesDB.MostrarNombres());
                         String borrar = sc.next();
                         if(PersonajesAccesDB.existePerso(borrar)){
                         PersonajesAccesDB.eliminarPersonaje(borrar);
