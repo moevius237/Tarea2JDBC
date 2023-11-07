@@ -1,20 +1,23 @@
-package Tablas;
+package Model;
 
 public class Personajes {
     private String name;
     private String raza;
     private int edad;
     private String dao;
-    private int reinoName;
     private String cultivacionName;
 
-    public Personajes(String name, String raza, int edad, String dao, int reinoName, String cultivacionName) {
+    public Personajes(String name, String raza, int edad, String dao, String cultivacionName) {
         this.name = name;
         this.raza = raza;
         this.edad = edad;
         this.dao = dao;
-        this.reinoName = reinoName;
+
         this.cultivacionName = cultivacionName;
+    }
+
+    public Personajes() {
+
     }
 
     public String getName() {
@@ -49,16 +52,20 @@ public class Personajes {
         this.dao = dao;
     }
 
-    public int getReinoName() {
-        return reinoName;
-    }
-
-    public void setReinoName(int reinoName) {
-        this.reinoName = reinoName;
-    }
 
     public String getCultivacionName() {
         return cultivacionName;
+    }
+
+    @Override
+    public String toString() {
+        return "Personajes{" +
+                "name='" + name + '\'' +
+                ", raza='" + raza + '\'' +
+                ", edad=" + edad +
+                ", dao='" + dao + '\'' +
+                ", cultivacionName='" + cultivacionName + '\'' +
+                '}';
     }
 
     public void setCultivacionName(String cultivacionName) {

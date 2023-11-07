@@ -1,4 +1,4 @@
-package Tablas;
+package Model;
 
 public class Cultivacion {
     private String etapa;
@@ -9,6 +9,19 @@ public class Cultivacion {
         this.etapa = etapa;
         this.tipo = tipo;
         this.tecnica = tecnica;
+    }
+
+    @Override
+    public String toString() {
+        return "Cultivacion{" +
+                "etapa='" + etapa + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", tecnica='" + tecnica + '\'' +
+                '}';
+    }
+
+    public Cultivacion() {
+
     }
 
     public String getEtapa() {

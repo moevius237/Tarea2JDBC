@@ -1,5 +1,6 @@
+package util;
+
 import java.io.IOException;
-import java.net.ConnectException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.sql.Connection;
@@ -7,12 +8,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class Connections {
-    private static Connection con;
+public class DatabaseConection {
+    private static Connection con = null;
     static {
         Properties properties = new Properties();
         try{
-        properties.load(Files.newBufferedReader(Path.of("datasource.propierties")));
+        properties.load(Files.newBufferedReader(Path.of("Datasource.properties")));
         con = DriverManager.getConnection(properties.getProperty("db.url"),
             properties.getProperty("db.user"),
             properties.getProperty("db.password"));
@@ -25,16 +26,18 @@ public class Connections {
                     e.getMessage());
         }
     }
-    private Connections(){
+    private DatabaseConection(){
     }
     public static Connection getCon(){
         return con;
     }
     public static void main(String [] args) {
-        try {
-            con.close();
-        }catch (SQLException e){
-            System.out.println("Hubo un problema al cerrar la conexion" + e.getMessage());
+        if (con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println("Hubo un problema al cerrar la conexión" + e.getMessage());
+            }
         }
     }
 }

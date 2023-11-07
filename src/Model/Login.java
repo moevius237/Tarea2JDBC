@@ -1,4 +1,4 @@
-package Tablas;
+package Model;
 
 import java.time.LocalDateTime;
 
@@ -7,6 +7,10 @@ public class Login {
     private String username;
     private String password;
     private LocalDateTime createadAT;
+
+    public Login() {
+
+    }
 
     public int getId() {
         return id;
@@ -45,5 +49,15 @@ public class Login {
         this.username = username;
         this.password = password;
         this.createadAT = createadAT;
+    }
+
+    @Override
+    public String toString() {
+        return "Login{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", createadAT=" + createadAT +
+                '}';
     }
 }
