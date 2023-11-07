@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tarea2JDBC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tarea2JDBC_jar</output-path>
+    <root id="archive" name="Tarea2JDBC.jar">
+      <element id="module-output" name="Tarea2JDBC" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/mysql-connector-java-8.0.30.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
